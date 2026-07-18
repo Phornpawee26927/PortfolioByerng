@@ -1,11 +1,6 @@
 /* ============================================================
-   Portfolio Theme: Midnight Gold Magic (Extended & Centered)
+   Portfolio Theme: Centered, Magical Gold & Blue (Extended)
    ============================================================ */
-
-/*
-   A sophisticated blue and gold theme with centered layout and
-   subtle 'magic glow' effects to create a mystical atmosphere.
-*/
 
 * {
     margin: 0;
@@ -16,337 +11,7 @@
 }
 
 body {
-    background: radial-gradient(circle, #0c1c38 0%, #030a1c 100%);
-    color: white;
-}
-
-/* --- Centered and Styled Hero Section --- */
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 140px 8% 80px 8%;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Optional: Layer of noise or particle animation here if desired, otherwise background handles it */
-
-.hero-text {
-    max-width: 650px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 10; /* Ensures text is always on top */
-}
-
-.hero-text h1 {
-    font-size: 55px;
-    color: gold;
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
-    margin-bottom: 10px;
-}
-
-.hero-text h3 {
-    margin: 10px 0;
-    font-weight: 400;
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.hero-text p {
-    line-height: 1.8;
-    color: #cbd4e0;
-    margin-bottom: 20px;
-}
-
-/* --- Hero Image and Pulsing Glow --- */
-
-.hero-img {
-    margin-top: 40px;
-    position: relative;
-    z-index: 5;
-}
-
-.hero-img img {
-    width: 280px;
-    border-radius: 50%;
-    border: 5px solid gold;
-    /* Base glow and animation */
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
-    animation: goldGlowPuff 6s ease-in-out infinite;
-}
-
-/* Special styling for Phornpawwee profile picture inside .hero-img if needed,
-   otherwise handled by .hero-img img */
-
-/* --- Styled Centered Buttons --- */
-
-.btn {
-    display: inline-block;
-    padding: 14px 40px;
-    background: gold;
-    color: #0c1c38;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 16px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    border: 2px solid transparent;
-    cursor: pointer;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    background: transparent;
-    color: gold;
-    border: 2px solid gold;
-    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
-}
-
-/* --- Navbar: Blurred Glass & Magic Glow --- */
-
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    background: rgba(8, 27, 75, 0.7);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-bottom: 2px solid gold;
-    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15); /* Subtile magic light bleed */
-}
-
-nav {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px;
-}
-
-.logo {
-    color: gold;
-    font-size: 28px;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s ease;
-    font-size: 16px;
-}
-
-nav a:hover {
-    color: gold;
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
-}
-
-/* --- Content Sections --- */
-
-section {
-    padding: 100px 8% 60px 8%;
-}
-
-.title {
-    text-align: center;
-    color: gold;
-    margin-bottom: 50px;
-    font-size: 38px;
-    text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
-}
-
-.about-box,
-.contact-box {
-    max-width: 900px;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.04);
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* --- Gallery & Magic Glowing Cards --- */
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 18px;
-    overflow: hidden;
-    transition: all 0.4s ease-in-out;
-    border: 2px solid rgba(255, 215, 0, 0.15);
-    position: relative;
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 0 35px rgba(255, 215, 0, 0.7);
-    border-color: gold;
-}
-
-.card:hover::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 18px;
-    box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.5); /* Inner sparkle effect on hover */
-    pointer-events: none;
-}
-
-.card img {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.4s ease;
-}
-
-.card:hover img {
-    transform: scale(1.05); /* Zoom image on card hover */
-}
-
-.card p {
-    padding: 18px;
-    text-align: center;
-    color: #e0e6ef;
-}
-
-/* --- Popup (Already mostly blurred) --- */
-
-#popup {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.9);
-    justify-content:center;
-    align-items:center;
-    z-index: 9999;
-}
-
-#popup img {
-    max-width: 90%;
-    max-height: 90%;
-    border: 5px solid gold;
-    border-radius: 10px;
-    box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
-}
-
-#popup span {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    color: white;
-    font-size: 50px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-#popup span:hover {
-    color: gold;
-}
-
-/* --- Footer --- */
-
-footer {
-    background: #030a1c;
-    text-align: center;
-    padding: 30px;
-    border-top: 2px solid gold;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* --- Advanced Animations --- */
-
-@keyframes goldGlowPuff {
-    0%, 100% {
-        box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
-    }
-    50% {
-        box-shadow: 0 0 60px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.3) inset;
-    }
-}
-
-/* --- Responsiveness --- */
-
-@media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 40px;
-    }
-
-    .hero-img img {
-        width: 220px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    nav ul {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-```นี่คือ CSS ที่อัปเกรดแล้ว ซึ่งจะช่วยเพิ่มเอฟเฟกต์ "เวทมนต์และฟุ้ง" อย่างที่คุณต้องการให้กับโครงสร้างเว็บไซต์เดิมของคุณ
-
-เพื่อให้ได้เอฟเฟกต์ที่คุณขอโดยไม่ต้องแก้ไขโครงสร้าง HTML ที่มีอยู่ ฉันใช้เทคนิค CSS ขั้นสูงบางอย่าง:
-
-1.  **Centered Hero Section:** ฉันปรับเปลี่ยนส่วน `.hero` และ `.hero-text` เพื่อใช้ Flexbox จัดทุกอย่างให้อยู่กึ่งกลางหน้าจออย่างสมบูรณ์ รวมถึงการจัดกลุ่มเนื้อหาข้อความให้อยู่ตรงกลางด้วย `text-align: center`.
-2.  **Magic Glowing Profile:** ฉันใส่แอนิเมชัน `box-shadow` แบบสั่นสะเทือน (`goldGlowPuff`) ไปที่รูปภาพโปรไฟล์ `.hero-img img` เพื่อสร้างเอฟเฟกต์แสงที่ "หายใจ" หรือ "ฟุ้งๆ".
-3.  **Gold Magic Accents:** หัวข้อหลักถูกจัดกึ่งกลางและเพิ่มเอฟเฟกต์ `text-shadow` ที่มีสีทองสดใสเพื่อให้นามสกุลเรืองแสงอย่างแผ่วเบา.
-4.  **Floating Elements:** ส่วนประกอบสำคัญเช่นหน้าต่างป๊อปอัป (`#popup`) และแผงนำทาง (`header`) ได้รับการอัปเดตให้มีเอฟเฟกต์ `backdrop-filter: blur(10px)` และการผสมผสานของแสงและเงา (`box-shadow` พร้อมเอฟเฟกต์แสงสะท้อน) เพื่อสร้างลักษณะที่นุ่มนวลและไม่ชัดเจนเหมือนความฝัน.
-5.  **Midnight Theme Color:** สีพื้นหลังโดยรวมถูกแทนที่ด้วยสีน้ำเงินเข้มเที่ยงคืนที่เข้มข้นขึ้นเพื่อเพิ่มความรู้สึกลึกลับ และเราใช้สีทองเป็นสำเนียงที่เรืองแสง.
-6.  **Pulsing Hover Effects:** ปุ่มและแกลเลอรีการ์ดได้รับการอัปเดตให้มีแอนิเมชัน "เวทมนต์" ที่ละเอียดอ่อนเช่นการเพิ่ม `box-shadow` ที่นุ่มนวลเมื่อโฮเวอร์เพื่อให้ดูเหมือนพวกมันกำลังเรืองแสงอย่างแผ่วเบา.
-
-### โค้ด CSS ที่อัปเดต:
-
-คัดลอกโค้ดนี้ไปแทนที่โค้ด CSS เดิมของคุณทั้งหมด:
-
-```css
-/* ============================================================
-   Portfolio Theme: Centered, Magical Gold & Midnight (Extended)
-   ============================================================ */
-
-/*
-   Updated with Centered Layout and Subtle Magical Glow effects
-   to enhance the 'spellbinding' atmosphere.
-*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Kanit', sans-serif;
-    scroll-behavior: smooth;
-}
-
-body {
-    /* Rich Midnight Blue Gradient for a deeper, magical feel */
+    /* Rich Midnight Blue Background ที่ช่วยขับให้ตัวหนังสือสีทองเด่นขึ้น */
     background: radial-gradient(circle, #0c1c38 0%, #030a1c 100%);
     color: white;
 }
@@ -366,32 +31,38 @@ body {
 }
 
 .hero-text {
-    max-width: 650px;
+    max-width: 750px; /* ขยายขนาดกล่องให้ชื่อยาวๆ อยู่ในบรรทัดเดียวกันสวยๆ */
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 10;
 }
 
-/* Golden Title with a slight magic glow effect */
+/* ปรับให้ชื่อ Phornpawee Ngamyat ตัวใหญ่ หนา เป็นสีทอง และเห็นพื้นหลังน้ำเงินชัดเจน */
 .hero-text h1 {
-    font-size: 55px;
-    color: gold;
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
-    margin-bottom: 10px;
+    font-size: 65px;            /* เพิ่มขนาดตัวอักษรให้ใหญ่สะใจ */
+    font-weight: 700;           /* เพิ่มความหนาของตัวอักษร */
+    color: #ffd700;             /* ใช้สีทองแท้เด่นๆ */
+    text-transform: uppercase;  /* เปลี่ยนเป็นตัวพิมพ์ใหญ่ทั้งหมด */
+    letter-spacing: 1px;        /* เว้นระยะห่างตัวอักษรให้ดูพรีเมียม */
+    /* เพิ่มประกายออร่าเวทมนต์สีทองฟุ้งๆ รอบตัวหนังสือ */
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.3);
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 .hero-text h3 {
     margin: 10px 0;
-    font-weight: 400;
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-text p {
     line-height: 1.8;
     color: #cbd4e0;
     margin-bottom: 20px;
+    font-size: 16px;
 }
 
 /* --- Hero Image and Pulsing Glow --- */
@@ -406,9 +77,7 @@ body {
     width: 280px;
     border-radius: 50%;
     border: 5px solid gold;
-    /* Basic glow */
     box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
-    /* Pulsing Magic Glow Animation */
     animation: goldGlowPuff 6s ease-in-out infinite;
 }
 
@@ -446,7 +115,6 @@ header {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-bottom: 2px solid gold;
-    /* Subtile golden light bleed */
     box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15);
 }
 
@@ -506,7 +174,6 @@ section {
     padding: 40px;
     border-radius: 20px;
     border: 1px solid rgba(255, 215, 0, 0.2);
-    /* Frosted glass effect for centered text panels */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
@@ -531,7 +198,6 @@ section {
 
 .card:hover {
     transform: translateY(-10px) scale(1.02);
-    /* Subtle pulsing glow on hover */
     box-shadow: 0 0 35px rgba(255, 215, 0, 0.7);
     border-color: gold;
 }
@@ -544,7 +210,6 @@ section {
     right: 0;
     bottom: 0;
     border-radius: 18px;
-    /* Inner sparkle effect on hover */
     box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.5);
     pointer-events: none;
 }
@@ -558,7 +223,7 @@ section {
 }
 
 .card:hover img {
-    transform: scale(1.05); /* Slight zoom on image hover */
+    transform: scale(1.05);
 }
 
 .card p {
@@ -567,7 +232,7 @@ section {
     color: #e0e6ef;
 }
 
-/* --- Popup (Already somewhat blurred) --- */
+/* --- Popup --- */
 
 #popup {
     display: none;
@@ -584,7 +249,6 @@ section {
     max-height: 90%;
     border: 5px solid gold;
     border-radius: 10px;
-    /* Intensified magic glow */
     box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
 }
 
@@ -612,9 +276,8 @@ footer {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* --- Advanced Animations --- */
+/* --- Animations --- */
 
-/* Creating a gentle, breathing gold glow puff */
 @keyframes goldGlowPuff {
     0%, 100% {
         box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
@@ -628,7 +291,7 @@ footer {
 
 @media (max-width: 768px) {
     .hero-text h1 {
-        font-size: 40px;
+        font-size: 40px; /* ย่อขนาดลงบนมือถือเพื่อไม่ให้ล้นหน้าจอ */
     }
 
     .hero-img img {
