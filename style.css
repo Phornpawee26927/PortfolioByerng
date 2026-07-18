@@ -1,49 +1,63 @@
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#1D4F91;
-    text-align:center;
-}
-
-header{
-    background:#AD841F;
-    color:white;
-    padding:30px;
-}
-
-.profile{
-    margin:30px;
-}
-
-.profile img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #2196F3;
-}
-
+/* ส่วนรวมของผลงาน */
 .gallery{
-    padding:20px;
-}
 
-.grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
-    max-width:900px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    max-width:1200px;
     margin:auto;
+
 }
 
-.grid img{
+
+/* กล่องผลงาน */
+.box{
+
+    background:white;
+    padding:15px;
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+    transition:0.3s;
+
+}
+
+
+/* เอฟเฟกต์ตอนเอาเมาส์วาง */
+.box:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+}
+
+
+
+/* รูปผลงาน */
+.box img{
+
     width:100%;
+    height:250px;
+
+    object-fit:cover;
+
     border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
 }
 
-footer{
-    margin-top:30px;
-    background:#222;
-    color:white;
-    padding:20px;
+
+
+/* ข้อความใต้รูป */
+.box p{
+
+    font-size:18px;
+
+    color:#003b73;
+
+    font-weight:bold;
+
+    margin-top:15px;
+
 }
