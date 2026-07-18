@@ -1,47 +1,219 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio By Erng</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PortfolioByPhornpawee</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
+
 <header>
-    <h1>Welcome</h1>
-    <p>เว็บไซต์ GitHub Pages</p>
+
+<img src="images/profile.jpg" alt="Profile">
+
+<h1>ชื่อ - นามสกุล</h1>
+
+<h2>Portfolio</h2>
+
+<p>
+แฟ้มสะสมผลงานเพื่อเข้าศึกษาต่อมหาวิทยาลัยมหิดล
+</p>
+
 </header>
 
-<section class="profile">
-    <img src="images/profile.jpg" alt="Profile">
-    <h2>Phornpawee Ngamyat</h2>
-    <p>Welcome to my website</p>
+
+
+<nav>
+
+<a href="#about">เกี่ยวกับฉัน</a>
+
+<a href="#education">การศึกษา</a>
+
+<a href="#portfolio">ผลงาน</a>
+
+<a href="#contact">ติดต่อ</a>
+
+</nav>
+
+
+
+
+<section id="about">
+
+<h2>เกี่ยวกับฉัน</h2>
+
+<p>
+สวัสดีครับ/ค่ะ ฉันเป็นนักเรียนที่มีความสนใจด้าน................
+มีความตั้งใจศึกษาต่อที่มหาวิทยาลัยมหิดล
+</p>
+
 </section>
 
-<section class="gallery">
-    <h2>แกลเลอรี</h2>
 
-    <div class="grid">
-        <img src="images/1.png" alt="">
-        <img src="images/2.png" alt="">
-        <img src="images/3.png" alt="">
-        <img src="images/4.png" alt="">
-        <img src="images/5.png" alt="">
-        <img src="images/6.png" alt="">
-        <img src="images/7.png" alt="">
-        <img src="images/8.png" alt="">
-        <img src="images/9.png" alt="">
-        <img src="images/10.png" alt="">
-        <img src="images/11.png" alt="">
-        <img src="images/12.png" alt="">
-        <img src="images/13.png" alt="">
-    </div>
+
+
+<section id="education">
+
+<h2>ประวัติการศึกษา</h2>
+
+<div class="card">
+
+<h3>โรงเรียนของฉัน</h3>
+
+<p>
+ระดับมัธยมศึกษา<br>
+แผนการเรียน ................
+</p>
+
+</div>
+
 </section>
+
+
+
+
+
+<section id="portfolio">
+
+
+<h2>แฟ้มสะสมผลงาน</h2>
+
+
+<div class="gallery">
+
+
+<div class="box">
+<img src="images/portfolio1.jpg">
+<p>ผลงานที่ 1</p>
+</div>
+
+
+<div class="box">
+<img src="images/portfolio2.jpg">
+<p>ผลงานที่ 2</p>
+</div>
+
+
+<div class="box">
+<img src="images/portfolio3.jpg">
+<p>ผลงานที่ 3</p>
+</div>
+
+
+<div class="box">
+<img src="images/portfolio4.jpg">
+<p>ผลงานที่ 4</p>
+</div>
+
+
+<div class="box">
+<img src="images/portfolio5.jpg">
+<p>ผลงานที่ 5</p>
+</div>
+
+
+<div class="box">
+<img src="images/portfolio6.jpg">
+<p>ผลงานที่ 6</p>
+</div>
+
+
+<div class="box">
+<img src="images/portfolio7.jpg">
+<p>ผลงานที่ 7</p>
+</div>
+
+
+<div class="box">
+<img src="images/portfolio8.jpg">
+<p>ผลงานที่ 8</p>
+</div>
+
+
+<div class="box">
+<img src="images/portfolio9.jpg">
+<p>ผลงานที่ 9</p>
+</div>
+
+
+<div class="box">
+<img src="images/portfolio10.jpg">
+<p>ผลงานที่ 10</p>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="contact">
+
+<h2>ติดต่อ</h2>
+
+<p>
+Email : your@email.com
+<br>
+GitHub : yourusername
+</p>
+
+</section>
+
+
+
 
 <footer>
-    <p>© 2026 Erng Phornpawee</p>
+
+<p>
+© 2026 Portfolio Mahidol University
+</p>
+
 </footer>
 
+
+
+
+
+<script>
+
+
+// เอฟเฟกต์เลื่อนหน้าเว็บ
+
+document.querySelectorAll('nav a').forEach(link => {
+
+link.addEventListener('click',function(e){
+
+e.preventDefault();
+
+document.querySelector(this.getAttribute('href'))
+.scrollIntoView({
+
+behavior:'smooth'
+
+});
+
+
+});
+
+});
+
+
+</script>
+
+
 </body>
+
 </html>
