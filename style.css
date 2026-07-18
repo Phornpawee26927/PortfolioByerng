@@ -1,5 +1,5 @@
 /* =======================
-   Portfolio Theme Blue & Gold
+   Portfolio Theme Blue & Gold (Premium Version)
 ========================== */
 
 *{
@@ -11,8 +11,9 @@
 }
 
 body{
-    background:linear-gradient(135deg,#081b4b,#0b2f7a,#123f9c);
+    background: radial-gradient(circle at center, #123f9c 0%, #0b2f7a 50%, #051438 100%);
     color:white;
+    min-height: 100vh;
 }
 
 /* Navbar */
@@ -22,9 +23,11 @@ header{
     width:100%;
     top:0;
     z-index:1000;
-    background:rgba(8,27,75,.9);
-    backdrop-filter:blur(10px);
+    background:rgba(8, 27, 75, 0.85);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
     border-bottom:2px solid gold;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 nav{
@@ -39,6 +42,8 @@ nav{
 .logo{
     color:gold;
     font-size:28px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
 nav ul{
@@ -50,68 +55,96 @@ nav ul{
 nav a{
     color:white;
     text-decoration:none;
+    font-weight: 500;
     transition:.3s;
 }
 
 nav a:hover{
     color:gold;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
 }
 
-/* Hero */
+/* Hero Section (ปรับให้อยู่กึ่งกลางหน้าจออย่างสมดุล) */
 
 .hero{
     min-height:100vh;
     display:flex;
-    justify-content:space-around;
+    flex-direction: column; /* จัดเรียงเป็นแนวตั้งเพื่อให้อยู่ตรงกลางสวยๆ */
+    justify-content:center;
     align-items:center;
-    padding:120px 8%;
-    flex-wrap:wrap;
+    text-align:center;      /* ทำให้ข้อความทั้งหมดอยู่กึ่งกลาง */
+    padding: 140px 8% 80px 8%;
+    gap: 40px;              /* เว้นระยะห่างระหว่างบล็อกข้อความกับรูปภาพ */
 }
 
 .hero-text{
-    max-width:550px;
+    max-width:700px;        /* ขยายความกว้างให้ตัวหนังสืออ่านง่ายขึ้นเมื่ออยู่ตรงกลาง */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* จัดปุ่มให้อยู่กึ่งกลาง */
 }
 
+/* เพิ่มลูกเล่นไล่เฉดสีทองให้ชื่อดูหรูหรา */
 .hero-text h1{
     font-size:55px;
-    color:gold;
+    background: linear-gradient(to right, #ffe066, #f5b041);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    filter: drop-shadow(0px 2px 10px rgba(255, 215, 0, 0.3));
 }
 
 .hero-text h3{
     margin:15px 0;
     font-weight:400;
+    font-size: 24px;
+    color: #f5b041;
 }
 
 .hero-text p{
-    line-height:1.8;
-    color:#ddd;
+    line-height: 1.8;
+    color: #e0e6ed;
+    font-size: 16px;
+    word-break: keep-all; /* ช่วยให้ภาษาไทยตัดคำสวยขึ้น */
 }
 
+/* ปุ่มแบบ Premium Glow */
 .btn{
     display:inline-block;
-    margin-top:25px;
-    padding:14px 35px;
-    background:gold;
-    color:#082567;
+    margin-top:30px;
+    padding:14px 40px;
+    background: linear-gradient(135deg, #ffe066, #f5b041);
+    color:#051438;
     text-decoration:none;
     border-radius:30px;
     font-weight:bold;
-    transition:.3s;
+    font-size: 16px;
+    transition: all .3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
 }
 
 .btn:hover{
     transform:translateY(-3px);
-    box-shadow:0 0 20px gold;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
 }
 
+/* ปรับกรอบรูปภาพให้เป็นวงกลมสมบูรณ์และนุ่มนวลขึ้น */
 .hero-img img{
-    width:320px;
+    width:300px;
+    height:300px;
+    object-fit: cover;
     border-radius:50%;
-    border:6px solid gold;
-    box-shadow:0 0 30px gold;
+    border:5px solid gold;
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.5);
+    transition: 0.5s ease;
 }
 
-/* Section */
+.hero-img img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 45px rgba(255, 215, 0, 0.8);
+}
+
+/* Section ทั่วไป */
 
 section{
     padding:80px 8%;
@@ -122,17 +155,20 @@ section{
     color:gold;
     margin-bottom:40px;
     font-size:38px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 .about-box,
 .contact-box{
     max-width:900px;
     margin:auto;
-    background:rgba(255,255,255,.08);
-    padding:30px;
+    background:rgba(255, 255, 255, 0.05);
+    padding:40px;
     border-radius:20px;
-    border:1px solid rgba(255,215,0,.4);
+    border:1px solid rgba(255, 215, 0, 0.25);
     backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Gallery */
@@ -144,16 +180,17 @@ section{
 }
 
 .card{
-    background:rgba(255,255,255,.08);
+    background:rgba(255, 255, 255, 0.05);
     border-radius:18px;
     overflow:hidden;
     transition:.3s;
-    border:2px solid rgba(255,215,0,.35);
+    border: 1px solid rgba(255, 215, 0, 0.2);
 }
 
 .card:hover{
     transform:translateY(-8px);
-    box-shadow:0 0 20px gold;
+    border-color: gold;
+    box-shadow:0 10px 25px rgba(255, 215, 0, 0.3);
 }
 
 .card img{
@@ -164,8 +201,9 @@ section{
 }
 
 .card p{
-    padding:15px;
+    padding:18px;
     text-align:center;
+    font-weight: 500;
 }
 
 /* Popup */
@@ -199,37 +237,35 @@ section{
 /* Footer */
 
 footer{
-    background:#07122f;
+    background:#051438;
     text-align:center;
     padding:25px;
     border-top:2px solid gold;
+    color: #a0aab5;
 }
 
-/* Responsive */
+/* Responsive (Mobile & Tablet) */
 
 @media(max-width:768px){
 
-.hero{
-    text-align:center;
-}
+    .hero-text h1{
+        font-size:38px;
+    }
 
-.hero-text h1{
-    font-size:38px;
-}
+    .hero-img img{
+        width:240px;
+        height:240px;
+    }
 
-.hero-img img{
-    width:230px;
-    margin-top:40px;
-}
+    nav{
+        flex-direction:column;
+        gap: 10px;
+    }
 
-nav{
-    flex-direction:column;
-}
-
-nav ul{
-    margin-top:15px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
+    nav ul{
+        margin-top:10px;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap: 15px;
+    }
 }
