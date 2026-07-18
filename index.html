@@ -1,223 +1,234 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Phornpawee Ngamyat</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<title>PortfolioByPhornpawee</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 
 <body>
 
+<!-- ===== Header ===== -->
 
 <header>
 
-<img src="images/erng.jpg" alt="Profile">
+    <nav>
 
-<h1> Phornpawee Ngamyat</h1>
+        <h2 class="logo">Portfolio</h2>
 
-<h2>Portfolio</h2>
+        <ul>
 
-<p>
-แฟ้มสะสมผลงานเพื่อเข้าศึกษาคณะแพทยาศาสตร์โรงพยาบาลรามาธิบดี หลักสูตรพยาบาลศาสตร์บัณฑิต มหาวิทยาลัยมหิดล
-</p>
+            <li><a href="#home">หน้าหลัก</a></li>
+
+            <li><a href="#about">ประวัติ</a></li>
+
+            <li><a href="#gallery">ผลงาน</a></li>
+
+            <li><a href="#contact">ติดต่อ</a></li>
+
+        </ul>
+
+    </nav>
 
 </header>
 
+<!-- ===== Welcome ===== -->
 
+<section class="Welcome" id="home">
 
-<nav>
+    <div class="hero-text">
 
+        <h1>นางสาวพรวีณ์ งามญาติ</h1>
 
-<a href="#education">การศึกษา</a>
+        <h3>Portfolio เพื่อศึกษาต่อ</h3>
 
-<a href="#portfolio">ผลงาน</a>
+        <p>
+            เว็บไซต์รวบรวมผลงาน กิจกรรม และผลงาน
+            เพื่อเป็นแนวทางในการศึกษาต่อ คณะแพทยาศาสตร์โรงพยาบาลรามาธิบดี
+            หลักสูตรพยาบาลศาสตร์บัณฑิต มหาวิทยาลัยมหิดล
+      
+        </p>
 
-<a href="#contact">ติดต่อ</a>
+        <a href="#gallery" class="btn">
+            ชมผลงาน
+        </a>
 
-</nav>
+    </div>
 
+    <div class="hero-img">
 
+        <img src="images/profile.jpg" alt="Profile">
 
+    </div>
 
+</section>
 
+<!-- ===== About ===== -->
 
-<section id="education">
+<section id="about">
 
-<h2>ประวัติการศึกษา</h2>
+<h2 class="title">
+เกี่ยวกับฉัน
+</h2>
 
-<div class="card">
-
-<h3>โรงเรียนกระทุ่มแบน "วิเศษสมุทคุณ"</h3>
+<div class="about-box">
 
 <p>
-ระดับมัธยมศึกษา<br>
-แผนการเรียนวิทยาศาสตร์-คณิตศาสตร์
+
+ชื่อ : นางสาวพรปวีณ์ งามญาติ
+
+<br><br>
+
+กำลังศึกษาระดับชั้นมัธยมศึกษาตอนปลาย
+
+<br><br>
+
+มีความสนใจด้าน
+การโครงงานวิทยาศาตร์
+กายวิภาคศาสตร์เบื้องต้น
+เคมีวิเคาะห์
+และนวัตกรรม
+
 </p>
 
 </div>
 
 </section>
 
+<!-- ===== Gallery ===== -->
 
+<section id="gallery">
 
+<h2 class="title">
 
+ผลงาน Portfolio
 
-<section id="portfolio">
-
-
-<h2>แฟ้มสะสมผลงาน</h2>
-
+</h2>
 
 <div class="gallery">
 
-
-<div class="box">
-<img src="images/1.png">
-<p>ปก</p>
+<div class="card">
+<img src="images/page1.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 1</p>
 </div>
 
-
-<div class="box">
-<img src="images/2.png">
-<p>SOP</p>
+<div class="card">
+<img src="images/page2.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 2</p>
 </div>
 
-
-<div class="box">
-<img src="images/3.png">
-<p>Profile</p>
+<div class="card">
+<img src="images/page3.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 3</p>
 </div>
 
-
-<div class="box">
-<img src="images/4.png">
-<p>ผลงานด้านวิชาการ</p>
+<div class="card">
+<img src="images/page4.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 4</p>
 </div>
 
-
-<div class="box">
-<img src="images/5.png">
-<p>ผลงานด้านวิชาการ</p>
+<div class="card">
+<img src="images/page5.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 5</p>
 </div>
 
-
-<div class="box">
-<img src="images/6.png">
-<p>ผลงานด้านวิชาการ</p>
+<div class="card">
+<img src="images/page6.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 6</p>
 </div>
 
-
-<div class="box">
-<img src="images/7.png">
-<p>ผลงานด้านวิชาการ</p>
+<div class="card">
+<img src="images/page7.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 7</p>
 </div>
 
-
-<div class="box">
-<img src="images/8.png">
-<p>ผลงานด้านวิชาการ</p>
+<div class="card">
+<img src="images/page8.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 8</p>
 </div>
 
-
-<div class="box">
-<img src="images/9.png">
-<p>ผลงานด้านวิชาชีพพยาบาล</p>
+<div class="card">
+<img src="images/page9.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 9</p>
 </div>
 
-
-<div class="box">
-<img src="images/10.png">
-<p>ผลงานด้านวิชาชีพพยาบาล</p>
+<div class="card">
+<img src="images/page10.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 10</p>
 </div>
 
-<div class="box">
-<img src="images/11.png">
-<p>ผลงานด้านจิตอาสา</p>
+<div class="card">
+<img src="images/page11.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 11</p>
 </div>
-
   
-<div class="box">
-<img src="images/12.png">
-<p>ผลงานด้าน ภาวะความเป็นผู้นำ</p>
+<div class="card">
+<img src="images/page12.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 12</p>
 </div>
 
-
-<div class="box">
-<img src="images/13.png">
-<p>กิจกรรมอื่นๆ</p>
+<div class="card">
+<img src="images/page13.png" onclick="openImage(this.src)">
+<p>Portfolio หน้า 13</p>
 </div>
-
-
+  
 </div>
-
 
 </section>
 
+<!-- ===== Popup ===== -->
 
+<div id="popup">
 
+<span onclick="closeImage()">&times;</span>
 
+<img id="popup-img">
+
+</div>
+
+<!-- ===== Contact ===== -->
 
 <section id="contact">
 
-<h2>ติดต่อ</h2>
+<h2 class="title">
 
-<p>
-Email : 164387@wsk.ac.th
-<br>
-GitHub : Phornpawee26927
-</p>
+Contact
+
+</h2>
+
+<div class="contact-box">
+
+<p>👤 นางสาวพรปวีณ์ งามญาาติ</p>
+
+<p>🎓 Portfolio เพื่อศึกษาต่อ</p>
+
+<p>📧 Email : phornpaweengamyat@email.com</p>
+
+<p>💻 GitHub : github.com/yourname</p>
+
+</div>
 
 </section>
-
-
-
 
 <footer>
 
 <p>
-© 2026 Portfolio By Phornpawee
+
+© 2026 Phornpawee Ngammyat
+
 </p>
 
 </footer>
 
-
-
-
-
-<script>
-
-
-// เอฟเฟกต์เลื่อนหน้าเว็บ
-
-document.querySelectorAll('nav a').forEach(link => {
-
-link.addEventListener('click',function(e){
-
-e.preventDefault();
-
-document.querySelector(this.getAttribute('href'))
-.scrollIntoView({
-
-behavior:'smooth'
-
-});
-
-
-});
-
-});
-
-
-</script>
-
+<script src="script.js"></script>
 
 </body>
-
 </html>
+
+
+
+
